@@ -1,0 +1,6 @@
+x1=int(input())#1st x cordinate
+y1=int(input())#1st y cordinate
+x2=int(input())#2nd x cordinate
+y2=int(input())#2nd y cordinate
+area=(x2-x1)*(y2-y1)
+print(area)
