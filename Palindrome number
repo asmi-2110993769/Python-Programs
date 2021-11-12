@@ -1,0 +1,14 @@
+n=int(input())
+rev=0
+m=n
+
+while n>0:
+    last_digit=n%10
+    rev=rev*10 +last_digit
+    n=n//10
+
+if rev==m:
+    print("true")
+else:
+    print("false")
+        
