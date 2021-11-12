@@ -1,0 +1,7 @@
+//first input the number
+//then take power as input
+//apply formula x**n
+x=int(input())
+n=int(input())
+ans=x**n
+print(ans)
