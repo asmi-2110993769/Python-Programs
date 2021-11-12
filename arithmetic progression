@@ -1,5 +1,5 @@
 a=int(input())
 b=int(input())
 c=int(input())
-d=b-a //common difference
+d=b-a 
 print(d)
