@@ -1,4 +1,4 @@
-# input three numbers
+# input three number
 # apply formula average= sum of all numbers/3
 a = int(input())
 b = int(input())
