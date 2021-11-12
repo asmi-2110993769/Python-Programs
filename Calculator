@@ -5,7 +5,7 @@
 # 4. If the input is 4, then 2 integers are taken from the user and the quotient obtained (on dividing 1st number by 2nd number) is printed.
 # 5. If the input is 5, then 2 integers are taken from the user and their remainder(1st number mod 2nd number) is printed.
 # 6. If the input is 6, then the program exits.
-# 7. For any other input, then print "Invalid Operation".
+# 7. For any other input, then print "Invalid Operation"
 choice=int(input())
 while choice!=6:
     if (choice<=5 and choice>=1):
