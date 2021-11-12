@@ -1,2 +1,2 @@
 # Python-Programs
-it contain my coding ninja python programs
+it contains my coding ninja python programs
