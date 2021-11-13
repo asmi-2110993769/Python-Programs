@@ -1,0 +1,46 @@
+from sys import stdin
+def binarySearch(arr, n, x):
+    low = 0
+    high = n - 1
+    mid = 0
+
+    while low <= high:
+
+        mid = (high + low) // 2
+
+        # If x is greater, ignore left half
+        if arr[mid] < x:
+            low = mid + 1
+
+        # If x is smaller, ignore right half
+        elif arr[mid] > x:
+            high = mid - 1
+
+        # means x is present at mid
+        else:
+            return mid
+
+    # If we reach here, then the element was not present
+    return -1
+
+
+# Taking Input Using Fast I/O
+def takeInput():
+    n = int(stdin.readline().strip())
+
+    if n == 0:
+        return list(), 0
+
+    arr = list(map(int, stdin.readline().strip().split(" ")))
+    return arr, n
+
+
+# main
+arr, n = takeInput()
+t = int(stdin.readline().strip())
+
+while t > 0:
+    x = int(input().strip())
+    print(binarySearch(arr, n, x))
+
+    t -= 1
