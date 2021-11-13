@@ -1,0 +1,26 @@
+from sys import stdin
+
+
+def reverseEachWord(string):
+    # Your code goes here
+    # Splitting the Sentence into list of words.
+    words = string.split(" ")
+
+    # Reversing each word and creating
+    # a new list of words
+    # List Comprehension Technique
+    newWords = [word[::-1] for word in words]
+
+    # Joining the new list of words
+    # to for a new Sentence
+    newString = " ".join(newWords)
+
+    return newString
+
+
+# main
+string = stdin.readline().strip()
+
+ans = reverseEachWord(string)
+
+print(ans)
