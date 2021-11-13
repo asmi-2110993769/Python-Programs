@@ -1,0 +1,22 @@
+from sys import stdin
+
+def highestOccuringChar(string):
+    ASCII_SIZE = 256
+    ctr = [0] * ASCII_SIZE
+    max = -1
+    ch = ''
+    for i in string:
+        ctr[ord(i)] += 1
+
+    for i in string:
+        if max < ctr[ord(i)]:
+            max = ctr[ord(i)]
+            ch = i
+    return ch
+
+
+# main
+string = stdin.readline().strip();
+ans = highestOccuringChar(string)
+
+print(ans)
