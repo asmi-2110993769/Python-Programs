@@ -1,0 +1,19 @@
+def swapAlternate(arr,n):
+    for i in range(0,n-1,2):
+        temp = arr[i]
+        arr[i] = arr[i+1]
+        arr[i+1] = temp
+        
+def printlist(arr,n):
+    for i in range(n):
+        print(arr[i],end = ' ')
+    print()
+    
+a = int(input())
+for i in range(a):
+    m = int(input())
+    arr = [int(x) for x in input().split()]
+    n = len(arr)
+    swapAlternate(arr,n)
+    printlist(arr,n)
+    
