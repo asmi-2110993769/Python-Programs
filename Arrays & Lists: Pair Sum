@@ -1,0 +1,26 @@
+from sys import stdin  ## Print output as specified in the question.
+def pairsum(arr, n, x):
+    count = 0
+    for i in range(n):
+        for j in range((i + 1), n):
+            if arr[i] + arr[j] == x:
+                count = count + 1
+    return count
+
+# Taking Input Using Fast I/
+def takeInput():
+    n = int(stdin.readline().strip())
+
+    if n == 0:
+        return list(), 0
+
+    arr = list(map(int, stdin.readline().strip().split(" ")))
+    return arr, n
+t = int(stdin.readline().strip())
+
+while t > 0:
+    arr, n = takeInput()
+    x = int(stdin.readline().strip())
+    print(pairsum(arr, n, x))
+
+    t -= 1
