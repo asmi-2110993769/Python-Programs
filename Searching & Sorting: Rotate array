@@ -1,0 +1,30 @@
+def rotate(arr, n, d):
+    
+    
+    swap(arr,0,d-1)
+    swap(arr,d,n-1)
+    swap(arr,0,n-1)
+    
+def swap(arr, i, j):
+    while i < j:
+        arr[i],arr[j] = arr[j],arr[i]
+        i = i + 1
+        j = j - 1
+        
+        
+
+t = int(input())
+
+for i in range(t):
+    
+    try:
+        n = int(input())
+        arr = input().split()
+        arr = [int(i) for i in arr]
+        d = int(input())
+        rotate(arr,n,d)
+        print(*arr)
+        pass
+    except:
+        pass
+        
