@@ -1,0 +1,29 @@
+mport sys
+import collections
+from collections import Counter
+
+def duplicateNumber(arr, n) :
+    ma=Counter(arr)
+    a=dict(ma)
+    for i,j in a.items():
+        if j>1:
+            return i
+def takeInput() :
+    n = int(sys.stdin.readline().strip())
+
+    if n == 0 :
+        return list(), 0
+
+    arr = list(map(int, sys.stdin.readline().strip().split()))
+    return arr, n
+
+
+#main
+t = int(sys.stdin.readline().strip())
+
+while t > 0 :
+    
+    arr, n = takeInput()
+    print(duplicateNumber(arr, n))
+
+    t -= 1   
