@@ -1,0 +1,14 @@
+n = int(input())  
+sum = 0  
+temp = n
+pow = int(len(str(n)))
+  
+while temp > 0:  
+   digit = temp % 10  
+   sum += digit ** pow
+   temp //= 10  
+  
+if n == sum:  
+   print('true')  
+else:  
+   print('false')  
