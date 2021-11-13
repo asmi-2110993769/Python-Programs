@@ -1,0 +1,28 @@
+rom sys import stdin
+def secondLargestElement(arr, n):  
+    MIN_VALUE = -2147483648
+    arr = sorted(list(set(arr)))
+    # print(arr)
+    n = len(arr)
+    if n <= 1:
+        return MIN_VALUE
+    else:
+        for i in range(n - 1, 0, -1):
+            if arr[-2] != arr[-1]:
+                return arr[-2]
+            else:
+                return MIN_VALUE
+def takeInput():
+    n = int(stdin.readline().rstrip())
+    if n != 0:
+        arr = list(map(int, stdin.readline().rstrip().split(" ")))
+        return arr, n
+
+    return list(), 0
+t = int(stdin.readline().rstrip())
+
+while t > 0:
+    arr, n = takeInput()
+    print(secondLargestElement(arr, n))
+
+    t -= 1
