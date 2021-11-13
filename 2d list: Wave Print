@@ -1,0 +1,28 @@
+from sys import stdin
+
+
+def wavePrint(arr, nRows, mCols):
+    # Your code goes here
+    rev_Wave = []
+    n = nRows
+    m = mCols
+    # j = m - 1                            			# to print reversed Wave
+    j = 0
+    wave = 1
+
+    # while j >= 0:                         		# do this to print reversed Wave
+    while j < m:  
+        if wave == 1:
+            for i in range(n):
+                print(arr[i][j], end=" ")
+            wave = 0
+            j += 1
+
+        else:
+            for i in range(n - 1, -1, -1):
+                print(arr[i][j], end=" ")
+
+            wave = 1
+            j += 1
+            # j -= 1
+
