@@ -6,5 +6,5 @@ while i<=N:
         print(N,end="")
         j=j+1
     print()
-    i=i+1
+    i+=1
     
