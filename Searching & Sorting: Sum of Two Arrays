@@ -1,0 +1,47 @@
+from sys import stdin
+def sumOfTwoArrays(arr1, n, arr2, m, output=None):
+    if output is None:
+        output = []
+    if n > m:
+        for i in range(n - m):
+            arr2.insert(0, 0)
+    else:
+        for i in range(m - n):
+            arr1.insert(0, 0)
+    arr1.insert(0, 0)
+    arr2.insert(0, 0)
+    for i in range(len(arr1)):
+        output.append(0)
+    carry = 0
+    for i in range(len(arr1) - 1, -1, -1):
+        x = arr1[i] + arr2[i] + carry
+        output[i] = (arr1[i] + arr2[i] + carry) % 10
+        if x > 9:
+            carry = 1
+        else:
+            carry = 0
+def takeInput():
+    n = int(stdin.readline().rstrip())
+    if n == 0:
+        return list(), 0
+
+    arr = list(map(int, stdin.readline().rstrip().split(" ")))
+    return arr, n
+def printList(arr, n):
+    for i in range(n):
+        print(arr[i], end=" ")
+
+    print()
+t = int(stdin.readline().rstrip())
+
+while t > 0:
+    arr1, n = takeInput()
+    arr2, m = takeInput()
+
+    outputSize = (1 + max(n, m))
+    output = outputSize * [0]
+
+    sumOfTwoArrays(arr1, n, arr2, m, output)
+    printList(output, outputSize)
+
+    t -= 1
