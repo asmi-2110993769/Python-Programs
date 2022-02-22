@@ -1,0 +1,13 @@
+## Read input as specified in the question.
+## Print output as specified in the question.
+def leaderprint(arr,n):
+    for i in range(0,n):
+        for j in range(i,n):
+            if (arr[i]<arr[j]):
+                break
+            if (j==n-1):
+                print(arr[i],end=" ")
+                
+n=int(input())
+a=list(map(int,input().strip().split()))[:n]
+leaderprint(a,n)
