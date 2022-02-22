@@ -1,0 +1,13 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[ ]:
+
+
+#Write your code here
+val = input().replace(" ", "")
+s = sorted(list(set(val)))
+a = []
+for i in s:
+    a.append((i, val.count(i)))
+print(a)
