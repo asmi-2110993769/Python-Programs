@@ -1,0 +1,24 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[ ]:
+
+
+#Write your code here
+B1 = int(input())
+B2 = int(input())
+B3 = int(input())
+B4 = int(input())
+a = [B1,B2,B3,B4]
+b = ["B1","B2","B3","B4"]
+N = int(input())
+flag =0
+sum =0
+for i in range(4):
+    sum = sum + a[i]
+    if(N<=sum):
+        print(b[i])
+        flag = 1
+        break
+if(flag==0):
+    print("EXT")
