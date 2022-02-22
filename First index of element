@@ -1,0 +1,31 @@
+n=int(input())
+li=[int(x) for x in input().split()]
+num=int(input())
+for i in range(n):
+    if li[i]==num:
+        print(i)
+        break
+else:
+    print(-1)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
