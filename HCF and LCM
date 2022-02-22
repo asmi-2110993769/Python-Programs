@@ -1,0 +1,31 @@
+def compute_hcf(x,y):
+   while(y):
+       x, y = y, x % y
+   return x
+    
+def compute_lcm(x, y):
+    lcm = (x*y)//compute_hcf(x,y)
+    return lcm
+
+num1=int(input())
+num2=int(input())
+lcm=compute_lcm(num1,num2)
+hcf=compute_hcf(num1,num2)
+sum=lcm+hcf
+print("LCM:",lcm)
+print("HCF:",hcf)
+print("Sum of LCM and HCF :",sum)
+        
+
+            
+
+
+    
+
+        
+        
+        
+    
+    
+
+    
